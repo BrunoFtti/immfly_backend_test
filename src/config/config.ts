@@ -36,6 +36,6 @@ const loadSimpleArray = () : string[] => {
   }
 }
 
-export const simpleArray = loadSimpleArray();
+export const simpleArray: string[] = loadSimpleArray();
 
-export const countriesUrl = process.env.COUNTRIES_API_URL;
+export const countriesUrl: string = process.env.COUNTRIES_API_URL || '';

@@ -26,10 +26,7 @@ export const fetchCountries = async (filter?: string, order?: string) => {
   // Make the request to the countries api
   let countries: CountryData[];
   try {
-    const response = await axios({
-      method: 'get',
-      url: countriesUrl
-    });
+    const response = await axios.get(countriesUrl);
 
     // If there is no data in the response, return error
     if (response.data) countries = response.data;
