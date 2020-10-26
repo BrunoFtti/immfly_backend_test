@@ -70,6 +70,12 @@ Where:
 - CONTAINER_PORT (optional): the new container will run in this port. This allows to run multiple containers of this image on different ports. Default: 8080.
 - NODE_ENV (optional): can be development, test, or production. This variable is used to know which src/config/.env.* file to load. Default: development.
 
+### OR use Compose
+Inside the project folder, change the NODE_ENV variable to **development**, **test** or **production** \
+in the file docker-compose.env, to use the src/config/.env.* file that you want, and then run:
+~~~
+docker-compose up
+~~~
 
 ## API documentation
 Once the service is up, the full API documentation can be found in\
@@ -111,4 +117,4 @@ The service will reply **408 Request Timeout** if there was no response after a 
 - SQL: experience with MySQL
 - NoSQL: experience with MongoDB
 - RabbitMQ: I've used it mostly as a consumer, but also handled message manual reinsertions and acknowledgements. Used it for 2 years.
-- Git: more than 7 years of experience with git.
+- Git: more than 7 years of experience.
