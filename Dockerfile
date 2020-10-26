@@ -19,15 +19,21 @@ RUN npm run tsc
 FROM alpine:3.12.1
 RUN apk add --no-cache "npm=12.18.4-r0" && rm -rf /var/cache/apk/*
 
+# Create app directory
 WORKDIR /usr/src/app
 
+# Set environmental variables
 ENV NODE_ENV=production
+ENV PORT=8080
 
+# Install only the required dependencies to run
 COPY package*.json ./
 RUN npm ci --quiet --only=production
 
+# Copy only the compiled files from the build stage
 COPY --from=build /usr/src/app/dist ./dist
 
 EXPOSE 8080
 
+# Command to run
 CMD ["npm", "start"]
