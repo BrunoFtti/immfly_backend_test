@@ -79,9 +79,10 @@ Once the service is up, the full API documentation can be found in\
 The main endpoints are:
 | Action|Method|URL|
 |-|-|-|
-|Fetch countries|**GET**|http://localhost:8080/countries?filter=**{string}**&order=**{asc/desc}**|
-|Reverse string|**GET**|http://localhost:8080/reverse/**{string}**|
-|Append to array|**POST**|http://localhost:8080/append?start=**{string}**&end=**{string}**|
+|Fetch countries|**GET**|http://localhost:8080/countries?filter={string}&order={string}|
+|Reverse string|**GET**|http://localhost:8080/reverse/{string}|
+|Append to array|**POST**|http://localhost:8080/append?start={string}&end={string}|
+(replace each {string} with the value you want, order can only be **asc** or **desc**)
 
 ### Responses
 - Fetch countries will return:
