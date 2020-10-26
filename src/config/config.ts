@@ -19,7 +19,7 @@ export const swaggerConfig = {
       title: 'Immfly Backend Test',
       version: '1.0.0'
     },
-    servers: [{ url: `http://localhost:${port}` }]
+    servers: [{ url: `http://localhost:${process.env.CONTAINER_PORT || port}` }]
   },
   apis: ['dist/api/routes.js']
 };
