@@ -2,9 +2,9 @@
 
 ## Description
 The test consists on creating an API with 3 endpoints to:
-- Return data abount countries from another API, allowing to filter them by country and code, and order them in ascending or descending order by their vat.
-- Return the string you sent, but reversed and with its vowels converted to uppercase.
-- Add to the start and/or to the end of an array the strings you provide in the query. The initial state of the array must be configurable.
+1. Return data abount countries from another API, allowing to filter them by country and code, and order them in ascending or descending order by their vat.
+2. Return the string you sent, but reversed and with its vowels converted to uppercase.
+3. Add to the start and/or to the end of an array the strings you provide in the query. The initial state of the array must be configurable.
 
 Create environment variables: NODE_ENV​ , SIMPLE_ARRAY​. \
 SIMPLE_ARRAY env variable will have the array that you will use to append the query params of the third endpoint.
@@ -114,7 +114,7 @@ The service will reply **408 Request Timeout** if there was no response after a 
 ---
 
 ## Additional information requested
-- SQL: experience with MySQL
-- NoSQL: experience with MongoDB
+- SQL: 1 year of experience with MySQL.
+- NoSQL: 2 years of experience with MongoDB.
 - RabbitMQ: I've used it mostly as a consumer, but also handled message manual reinsertions and acknowledgements. Used it for 2 years.
 - Git: more than 7 years of experience.
