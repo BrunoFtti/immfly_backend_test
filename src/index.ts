@@ -7,10 +7,13 @@ import { sendResponse } from './utils/response';
 import { port, requestTimeout } from './config/config';
 
 const app = express();
+
 app.use(cors());
 app.use(morgan('[:date[clf]] :status :method :url - :response-time ms'));
 app.use(express.json());
+
 app.use((req, res, next) => {
+  // If there is no response in a configured amount of time, reply 408 Request Timeout
   res.setTimeout(requestTimeout, () => {
     console.warn('Request has timed out');
     sendResponse(res, 408);
