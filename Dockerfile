@@ -28,4 +28,6 @@ RUN npm ci --quiet --only=production
 
 COPY --from=build /usr/src/app/dist ./dist
 
+EXPOSE 8080
+
 CMD ["npm", "start"]
